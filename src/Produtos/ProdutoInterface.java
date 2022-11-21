@@ -1,6 +1,7 @@
 package Produtos;
 
 public interface ProdutoInterface {
+
     public abstract int getProdutoId();
     public abstract void setProdutoId(int id);
 

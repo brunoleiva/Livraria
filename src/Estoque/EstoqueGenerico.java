@@ -18,4 +18,7 @@ public class EstoqueGenerico<T> {
     public void remove(T t) {
         estoque.remove(t);
     }
+
+    public int size(){return estoque.size();}
+
 }

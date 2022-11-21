@@ -7,6 +7,7 @@ public class Caixa {
         this.dinheiro = dinheiro;
     }
 
+
     public double getDinheiro() {
         return dinheiro;
     }

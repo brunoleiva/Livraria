@@ -19,6 +19,10 @@ public class Livro extends Produto{
         this.editora = editora;
     }
 
+    public Livro() {
+
+    }
+
     public String getEscritor() {
         return escritor;
     }
@@ -33,5 +37,13 @@ public class Livro extends Produto{
 
     public void setEditora(String editora) {
         this.editora = editora;
+    }
+
+    @Override
+    public String toString() {
+        return "Livro{" +super.toString()  +
+                ", escritor='" + escritor + '\'' +
+                ", editora='" + editora + '\'' +
+                '}' +"\n";
     }
 }

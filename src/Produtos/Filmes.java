@@ -46,4 +46,13 @@ public class Filmes extends Produto{
     public void setProdutores(ArrayList<String> produtores) {
         this.produtores = produtores;
     }
+
+    @Override
+    public String toString() {
+        return "Filmes{" +super.toString()  +
+                ",estudio='" + estudio + '\'' +
+                ", diretores=" + diretores +
+                ", produtores=" + produtores +
+                '}'+"\n";
+    }
 }

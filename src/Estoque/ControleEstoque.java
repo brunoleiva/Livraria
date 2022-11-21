@@ -9,11 +9,23 @@ public class ControleEstoque {
     public static EstoqueGenerico<Jogos> estoqueJogos  = new EstoqueGenerico<>();
     public static EstoqueGenerico<AlbumMusica> estoqueAlbumMusica = new EstoqueGenerico<>();
 
-    public static EstoqueGenerico<Produto> estoqueProdutos = new EstoqueGenerico<>();
 
-    public static void teste(){
-        System.out.printf(String.valueOf(estoqueProdutos.getLista().get(0).getClass()));
+    public static EstoqueGenerico<Produto> produtos = new EstoqueGenerico<>();
+
+
+    public static int quantidadeProdutos(EstoqueGenerico estoque){
+        return estoque.size();
     }
 
-
+    public static String listagemPorCategoria(EstoqueGenerico estoque){
+        return "Listagem por categoria: \n" + estoque.getLista().toString();
+    }
+    public static String listagemEstoque(){
+        produtos.getLista().addAll(estoqueLivro.getLista());
+        produtos.getLista().addAll(estoqueBrinquedos.getLista());
+        produtos.getLista().addAll(estoqueFilmes.getLista());
+        produtos.getLista().addAll(estoqueJogos.getLista());
+        produtos.getLista().addAll(estoqueAlbumMusica.getLista());
+        return "Listagem completa: \n" + produtos.getLista().toString();
+    }
 }

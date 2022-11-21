@@ -17,6 +17,10 @@ public class Produto implements ProdutoInterface {
         this.id = id;
     }
 
+    public Produto() {
+
+    }
+
     @Override
     public int getProdutoId() {
         return this.id;
@@ -55,5 +59,13 @@ public class Produto implements ProdutoInterface {
     @Override
     public void setProdutoNome(String nome) {
         this.nome = nome;
+    }
+
+    @Override
+    public String toString() {
+        return  "id=" + id +
+                ", preco=" + preco +
+                ", genero='" + genero + '\'' +
+                ", nome='" + nome + '\'' ;
     }
 }

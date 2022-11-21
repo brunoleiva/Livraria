@@ -34,4 +34,12 @@ public class Jogos extends Produto{
     public void setEstudio(String estudio) {
         this.estudio = estudio;
     }
+
+    @Override
+    public String toString() {
+        return "Jogos{" +super.toString()  +
+                ",distribuidora='" + distribuidora + '\'' +
+                ", estudio='" + estudio + '\'' +
+                '}'+"\n";
+    }
 }
