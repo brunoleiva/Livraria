@@ -1,5 +1,7 @@
 package Produtos;
 
+import javax.print.attribute.standard.JobSheets;
+
 public class Jogos extends Produto{
 
     private String distribuidora;
@@ -10,14 +12,15 @@ public class Jogos extends Produto{
         this.distribuidora = distribuidora;
         this.estudio = estudio;
     }
+    public Jogos(int id, double preco, String genero, String nome,boolean isDestinadoAdultos, String distribuidora, String estudio) {
+        super(id, preco, genero, nome,isDestinadoAdultos);
+        this.distribuidora = distribuidora;
+        this.estudio = estudio;
+    }
+    public Jogos(){
 
-    public Jogos(int id, double preco, String genero, String nome) {
-        super(id, preco, genero, nome);
     }
 
-    public Jogos(int id) {
-        super(id);
-    }
 
     public String getDistribuidora() {
         return distribuidora;

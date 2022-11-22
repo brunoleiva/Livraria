@@ -5,16 +5,14 @@ public class Livro extends Produto{
     private String escritor;
     private String editora;
 
-    public Livro(int id, double preco, String genero, String nome) {
-        super(id, preco, genero, nome);
-    }
-
-    public Livro(int id) {
-        super(id);
-    }
-
     public Livro(int id, double preco, String genero, String nome, String escritor, String editora) {
         super(id, preco, genero, nome);
+        this.escritor = escritor;
+        this.editora = editora;
+    }
+
+    public Livro(int id, double preco, String genero, String nome,boolean isDestinadoAdultos, String escritor, String editora) {
+        super(id, preco, genero, nome,isDestinadoAdultos);
         this.escritor = escritor;
         this.editora = editora;
     }

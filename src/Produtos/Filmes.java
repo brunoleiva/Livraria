@@ -15,6 +15,13 @@ public class Filmes extends Produto{
         this.produtores = produtores;
     }
 
+    public Filmes(int id, double preco, String genero, String nome, boolean isDestinadoAdultos,String estudio, ArrayList<String> diretores, ArrayList<String> produtores) {
+        super(id, preco, genero, nome,isDestinadoAdultos);
+        this.estudio = estudio;
+        this.diretores = diretores;
+        this.produtores = produtores;
+    }
+
     public Filmes(int id, double preco, String genero, String nome) {
         super(id, preco, genero, nome);
     }

@@ -17,9 +17,6 @@ public class ControleEstoque {
         return estoque.size();
     }
 
-    public static String listagemPorCategoria(EstoqueGenerico estoque){
-        return "Listagem por categoria: \n" + estoque.getLista().toString();
-    }
     public static String listagemEstoque(){
         /*produtos.getLista().addAll(estoqueLivro.getLista());
         produtos.getLista().addAll(estoqueBrinquedos.getLista());

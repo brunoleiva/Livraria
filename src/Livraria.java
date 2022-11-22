@@ -1,9 +1,14 @@
+import Cliente.Comprador;
 import Estoque.ControleEstoque;
 import Financeiro.Financeiro;
 import Financeiro.Caixa;
 import ManipularProdutos.ManipularProduto;
 import Produtos.Brinquedos;
 import Produtos.Livro;
+
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 
 public class Livraria {
@@ -31,10 +36,23 @@ public class Livraria {
         Livro livroAlterar = (Livro) manipular.verProduto(60);
         manipular.removerProduto(livroAlterar.getProdutoId());
         //System.out.println(ControleEstoque.listagemEstoque());
-
-
         Financeiro financeiro = new Financeiro();
         Caixa caixa = new Caixa(650.50);
+
+        String str = "27/06/2001";
+
+        SimpleDateFormat formatador = new SimpleDateFormat("dd/MM/yyyy");
+        Date data = null;
+        try {
+            data = formatador.parse(str);
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+
+        Comprador comprador = new Comprador("Bruno", "3423423423","32423434",data);
+
+        financeiro.isCompradorMaiordeIdade(comprador);
+        /*
 
         System.out.println(caixa.getDinheiro());
         System.out.println(ControleEstoque.listagemEstoque());
@@ -42,7 +60,7 @@ public class Livraria {
         //financeiro.realizarCompra(caixa, manipularBrinquedos.verBrinquedos(1));
         System.out.println(ControleEstoque.listagemEstoque());
         System.out.println(caixa.getDinheiro());
-
+*/
         /*Livro livroAlterar = (Livro) manipular.verProduto(60);
         livroAlterar.setProdutoNome("NOME ALTERADO");
         manipular.alterarProduto(livroAlterar);

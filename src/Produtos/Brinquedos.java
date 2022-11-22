@@ -8,6 +8,10 @@ public class Brinquedos extends Produto {
         super(id, preco, genero, nome);
         this.tipo = tipo;
     }
+    public Brinquedos(int id, double preco, String genero,boolean isDestinadoAdultos, String nome, String tipo) {
+        super(id, preco, genero, nome,isDestinadoAdultos);
+        this.tipo = tipo;
+    }
 
     public Brinquedos(int id, double preco, String genero, String nome) {
         super(id, preco, genero, nome);

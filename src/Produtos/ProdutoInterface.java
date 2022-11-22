@@ -14,4 +14,6 @@ public interface ProdutoInterface {
     public abstract String getProdutoNome();
     public abstract void setProdutoNome(String nome);
 
+    public abstract boolean getIsDestinadoAdultos();
+    public abstract void setIsDestinadoAdultos(boolean destinadoAdultos);
 }

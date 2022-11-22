@@ -5,12 +5,20 @@ public class Produto implements ProdutoInterface {
     private double preco;
     private String genero;
     private String nome;
+    private boolean isDestinadoAdultos;
 
     public Produto(int id, double preco, String genero, String nome) {
         this.id = id;
         this.preco = preco;
         this.genero = genero;
         this.nome = nome;
+    }
+    public Produto(int id, double preco, String genero, String nome, boolean isDestinadoAdultos) {
+        this.id = id;
+        this.preco = preco;
+        this.genero = genero;
+        this.nome = nome;
+        this.isDestinadoAdultos = isDestinadoAdultos;
     }
 
     public Produto(int id) {
@@ -59,6 +67,16 @@ public class Produto implements ProdutoInterface {
     @Override
     public void setProdutoNome(String nome) {
         this.nome = nome;
+    }
+
+    @Override
+    public boolean getIsDestinadoAdultos() {
+        return this.isDestinadoAdultos;
+    }
+
+    @Override
+    public void setIsDestinadoAdultos(boolean isDestinadoAdultos) {
+        this.isDestinadoAdultos = isDestinadoAdultos;
     }
 
     @Override

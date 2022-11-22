@@ -11,6 +11,12 @@ public class AlbumMusica extends Produto{
         this.selo = selo;
     }
 
+    public AlbumMusica(int id, double preco, String genero, String nome,boolean isDestinadoAdultos, String musicoBanda, String selo) {
+        super(id, preco, genero, nome,isDestinadoAdultos);
+        this.musicoBanda = musicoBanda;
+        this.selo = selo;
+    }
+
     public AlbumMusica(int id, double preco, String genero, String nome) {
         super(id, preco, genero, nome);
     }
