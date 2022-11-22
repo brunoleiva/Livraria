@@ -1,5 +1,7 @@
 package Estoque;
 
+import Produtos.Produto;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -20,5 +22,7 @@ public class EstoqueGenerico<T> {
     }
 
     public int size(){return estoque.size();}
+
+
 
 }

@@ -68,4 +68,15 @@ public class Produto implements ProdutoInterface {
                 ", genero='" + genero + '\'' +
                 ", nome='" + nome + '\'' ;
     }
+    @Override
+    public boolean equals(Object obj) {
+
+        Produto produto = (Produto) obj;
+
+        if(getProdutoId() == produto.getProdutoId()) {
+            return true;
+        } else {
+            return false;
+        }
+    }
 }
